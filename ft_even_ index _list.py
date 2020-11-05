@@ -5,5 +5,5 @@ def ft_even_index_list(mass):
         l += 1
     for i in range(l):
         if i % 2 == 0:
-            a.append(mass[i])
+            a += mass[i]
     return a
