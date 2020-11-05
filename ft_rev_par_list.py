@@ -6,14 +6,14 @@ def ft_len(mass):
 
 
 def ft_rev_par_list(mass):
-    a = []
     if ft_len(mass) % 2 == 0:
         for i in range(1, ft_len(mass), 2):
-            a += [mass[i]]
-            a += [mass[i - 1]]
+            ind = i - 1
+            mass[i] = mass[ind]
+            mass[ind] = mass[i]
     elif ft_len(mass) % 2 == 1:
         for i in range(1, ft_len(mass) - 1, 2):
-            a += [mass[i]]
-            a += [mass[i - 1]]
-        a += [mass[-1]]
-    return a
+            ind = i + 1
+            mass[i] = mass[ind]
+            mass[ind] = mass[i]
+    return mass
